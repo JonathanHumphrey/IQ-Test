@@ -1,12 +1,20 @@
 import React from 'react'
+import Modal from 'react-bootstrap/Modal'
 
-
-function Modal({toggleShow}) {
+function ModalContainer({show, toggleShow, testOver}) {
     return (
-        <Modal onHide={toggleShow}>
-            You are now waiting!
-        </Modal>
+        <div>
+            <Modal
+                show={show}
+                onHide={toggleShow}
+                dialogClassName="modal"
+            >
+                You are now waiting!
+                 <br></br>
+                <button onClick={testOver}>Close</button>
+            </Modal>
+        </div>
     )
 }
-export default Modal;
+export default ModalContainer;
 
